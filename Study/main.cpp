@@ -18,10 +18,11 @@ ISR(ADC_vect) {
 	sei();
 }
 
-/*int main(void)
+int main(void)
 {
 	TCCR0A = (1 << COM0A1) | (1 << WGM00);	
 	TCCR0B = (1 << CS02) | (1 << CS00);
+	//TIMSK0 = (1 << TOV0);
 	while (1)
 	{
 		char i;
@@ -30,7 +31,7 @@ ISR(ADC_vect) {
 			_delay_ms(10);
 		}
 	}
-}*/
+}
 
 /*int main(void)
 {
@@ -45,7 +46,7 @@ ISR(ADC_vect) {
 	}
 }*/
 
-int main(void)
+/*int main(void)
 {
 	ADMUX = (1 << REFS0) | (1 << ADLAR);
 	ADCSRA = (1 << ADEN) | (1 << ADSC) | (1 << ADATE) | (1 << ADIE) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
@@ -57,7 +58,7 @@ int main(void)
 	{
 		OCR0A = av;
 	}
-}
+}*/
 
 /*int main(void)
 {
